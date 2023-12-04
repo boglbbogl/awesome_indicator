@@ -1,4 +1,4 @@
-import 'package:awesome_indicator/awesome_indicator.dart';
+import 'package:awesome_indicator/awesome_scroll_indicator.dart';
 import 'package:flutter/material.dart';
 
 class ExampleAwesomeIndicator extends StatefulWidget {
@@ -102,7 +102,7 @@ class _ExampleAwesomeIndicatorState extends State<ExampleAwesomeIndicator> {
             ),
           ),
           const SizedBox(height: 24),
-          AwesomeIndicator(
+          AwesomeScrollIndicator(
             width: MediaQuery.of(context).size.width - 40,
             controller: caseOneController,
             color: Colors.white,
