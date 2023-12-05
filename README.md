@@ -40,10 +40,8 @@ dependencies:
 **_After that import the package_**
 
 ```
-
+import 'package:awesome_indicator/awesome_indicator.dart';
 ```
-
-
 
 ```dart
 final ScrollController controller = ScrollController();
@@ -52,6 +50,10 @@ AwesomeScrollIndicator(
     controller : controller,
 );
 ```
+
+### Optional
+
+
 
 ## Additional information
 
