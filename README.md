@@ -11,7 +11,7 @@ and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/developing-packages).
 -->
 
-# :불: Awesome Indicator
+# 🔥 Awesome Indicator
 
 ## Features
 
