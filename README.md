@@ -43,11 +43,49 @@ dependencies:
 import 'package:awesome_indicator/awesome_indicator.dart';
 ```
 
+### Scroll Indicator
+
 ```dart
 final ScrollController controller = ScrollController();
 
 AwesomeScrollIndicator(
-    controller : controller,
+  controller: controller,
+);
+```
+
+**_Size_**
+
+```dart
+AwesomeScrollIndicator(
+  width : 300,
+  height : 8,
+  indicator : 0.3,
+);
+```
+
+**_Colors_**
+
+```dart
+AwesomeScrollIndicator(
+  backgroud: const Color.fromRGBO(95, 95, 95, 1),
+  color : const Color.fromRGBO(255, 255, 255, 1),
+);
+```
+
+**_Box_**
+
+```dart
+AwesomeScrollIndicator(
+  border : Border.all(),
+  radius : 20,
+);
+```
+
+**_onListener_**
+
+```dart
+AwesomeScrollIndicator(
+  onListener: (int ratio, double position) {},
 );
 ```
 
