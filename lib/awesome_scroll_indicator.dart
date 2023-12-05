@@ -12,7 +12,7 @@ class AwesomeScrollIndicator extends StatefulWidget {
   final Function(int, double)? onListener;
 
   const AwesomeScrollIndicator({
-    super.key,
+    Key? key,
     required this.controller,
     this.height,
     this.width,
@@ -22,7 +22,7 @@ class AwesomeScrollIndicator extends StatefulWidget {
     this.indicator = 0.5,
     this.border,
     this.onListener,
-  });
+  }) : super(key: key);
 
   @override
   State<AwesomeScrollIndicator> createState() => _AwesomeScrollIndicatorState();
