@@ -32,7 +32,16 @@ and the Flutter guide for
 
 **_Add the package to pubspec.yaml_**
 
+```
+dependencies:
+  awesome_indicator: ^0.0.1
+```
+
 **_After that import the package_**
+
+```
+
+```
 
 
 
