@@ -34,7 +34,7 @@ and the Flutter guide for
 
 ```
 dependencies:
-  awesome_indicator: ^0.0.1
+  awesome_indicator: ^<latest-version>
 ```
 
 **_After that import the package_**
