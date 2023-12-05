@@ -29,7 +29,11 @@ TODO: Include short and useful examples for package users. Add longer examples
 to `/example` folder.
 
 ```dart
-const like = 'sample2';
+final ScrollController controller = ScrollController();
+
+AwesomeScrollIndicator(
+    controller : controller,
+);
 ```
 
 ## Additional information
