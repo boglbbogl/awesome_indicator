@@ -11,16 +11,29 @@ and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/developing-packages).
 -->
 
+# Indicator that operates with horizontal scrolling
 
 ## Features
 
 - Horizontal Scroll Indicator
 
-## Getting started
+-----------
 
+## Support Platforms
 
+- Flutter Android
+- Flutter iOS
+- Flutter Web
+- Flutter Desktop
+
+-----
 
 ## Usage
+
+**_Add the package to pubspec.yaml_**
+
+**_After that import the package_**
+
 
 
 ```dart
