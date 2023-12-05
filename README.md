@@ -55,6 +55,6 @@ AwesomeScrollIndicator(
 
 
 
-## Additional information
+--------
 
-
+Created by Tyger [Github](https://github.com/boglbbogl)
