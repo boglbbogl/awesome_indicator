@@ -1,9 +1,13 @@
-[0.0.3]
-* [Update] README.md
+### [0.0.3]
+* _[Update] README.md_
 
-[0.0.2]
-* [Add] Example
+--------------------------
 
-[0.0.1]
-* Initial version.
+### [0.0.2]
+* _[Add] Example_
+
+--------------------------
+
+### [0.0.1]
+* _Initial version_
 
