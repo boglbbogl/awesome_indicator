@@ -59,6 +59,7 @@ AwesomeScrollIndicator(
 AwesomeScrollIndicator(
   width : 300,
   height : 8,
+  indicator : 0.3,
 );
 ```
 
@@ -68,6 +69,23 @@ AwesomeScrollIndicator(
 AwesomeScrollIndicator(
   backgroud: const Color.fromRGBO(95, 95, 95, 1),
   color : const Color.fromRGBO(255, 255, 255, 1),
+);
+```
+
+**_Box_**
+
+```dart
+AwesomeScrollIndicator(
+  border : Border.all(),
+  radius : 20,
+);
+```
+
+**_onListener_**
+
+```dart
+AwesomeScrollIndicator(
+  onListener: (int ratio, double position) {},
 );
 ```
 
