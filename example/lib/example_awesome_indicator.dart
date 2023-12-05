@@ -23,7 +23,7 @@ class _ExampleAwesomeIndicatorState extends State<ExampleAwesomeIndicator> {
       backgroundColor: background,
       appBar: AppBar(
         title: const Text(
-          "Slider Indicator",
+          "Scroll Indicator",
           style: TextStyle(
               fontWeight: FontWeight.bold, fontSize: 28, color: Colors.white),
         ),

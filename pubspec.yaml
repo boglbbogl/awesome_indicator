@@ -1,7 +1,7 @@
 name: awesome_indicator
-description: A new Flutter package project.
+description: Indicator that operates with horizontal scrolling !!
 version: 0.0.1
-homepage:
+homepage: https://github.com/boglbbogl/awesome_indicator
 
 environment:
   sdk: '>=3.1.5 <4.0.0'
