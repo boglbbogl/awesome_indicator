@@ -93,16 +93,17 @@ AwesomeScrollIndicator(
 
 ## Attribute
 
-| Attribute      | Type     | Required  | Description                 |
-| -------------- | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------ |
-| controller     | ScrollController  | O    | Scroll listener      |
-| itemCount      | int      | no       | Total number of items.      |
-| itemCount      | int      | no       | Total number of items.      |
-| itemCount      | int      | no       | Total number of items.      |
-| itemCount      | int      | no       | Total number of items.      |
-| itemCount      | int      | no       | Total number of items.      |
-| itemCount      | int      | no       | Total number of items.      |
-| itemCount      | int      | no       | Total number of items.      |
+| Attribute      | Type     | Required  | Description                 | Default Value                 |
+| -------------- | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------ | ------------------------ |
+| controller     | ScrollController      | O  | Scroll listener.                  | -               | 
+| height         | double                | X  | Total height.                     | 8.0             | 
+| width          | double                | X  | Total width.                      | Max width       | 
+| indicator      | double                | X  | Indicator weight.                 | 50%             | 
+| background     | Color                 | X  | Background Color.                 | Hex(#C3C3C3)    | 
+| color          | Color                 | X  | Indicator Color.                  | Hex(#000000)    | 
+| radius         | double                | X  | Container Radius.                 | Max width       | 
+| border         | Border                | X  | Container Border.                 | Border.none     | 
+| onListener     | Function(int, double) | X  | Listen state(Percentage, Pixel).  | -               | 
 
 
 
