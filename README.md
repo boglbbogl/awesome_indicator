@@ -95,7 +95,15 @@ AwesomeScrollIndicator(
 
 | Attribute      | Type     | Required  | Description                 |
 | -------------- | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------ |
+| controller     | ScrollController  | O    | Scroll listener      |
 | itemCount      | int      | no       | Total number of items.      |
+| itemCount      | int      | no       | Total number of items.      |
+| itemCount      | int      | no       | Total number of items.      |
+| itemCount      | int      | no       | Total number of items.      |
+| itemCount      | int      | no       | Total number of items.      |
+| itemCount      | int      | no       | Total number of items.      |
+| itemCount      | int      | no       | Total number of items.      |
+
 
 
 
