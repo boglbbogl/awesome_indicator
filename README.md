@@ -1,5 +1,7 @@
 # 🔥 Awesome Indicator
 
+![IMB_KTMYvm](https://github.com/boglbbogl/awesome_indicator/assets/75574246/d94d1901-f7f3-4156-8d7c-56ceef4c1d62)
+
 ## Features
 
 - Horizontal Scroll Indicator
