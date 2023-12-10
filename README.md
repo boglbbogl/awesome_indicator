@@ -34,7 +34,6 @@ import 'package:awesome_indicator/awesome_indicator.dart';
 
 ### Scroll Indicator
 
-- ScrollView 위젯의 Controller를 전달만 하시면 되요 !
 
 ```dart
 final ScrollController controller = ScrollController();
@@ -48,9 +47,6 @@ AwesomeScrollIndicator(
 
 **_Size_**
 
-- width : Indicator 가로 사이즈를 지정할 수 있어요 !
-- height : Indicator 높이 사이즈를 지정할 수 있어요 !
-- indicator : Indicator의 비율을 0~1 사이의 비율로 지정해 주세요 !
 
 ```dart
 AwesomeScrollIndicator(
@@ -62,8 +58,6 @@ AwesomeScrollIndicator(
 
 **_Colors_**
 
-- background : Indicator 백그라운드 컬러를 지정해 주세요 !
-- color : Indicator 컬러를 지정해 주세요 !
 
 ```dart
 AwesomeScrollIndicator(
@@ -74,8 +68,6 @@ AwesomeScrollIndicator(
 
 **_Box_**
 
-- border : Container의 Boder를 생성할 수 있어요 !
-- radius : BorderRadius 값을 생성할 수 있어요 !
 
 ```dart
 AwesomeScrollIndicator(
@@ -86,7 +78,6 @@ AwesomeScrollIndicator(
 
 **_onListener_**
 
-- onListener : Indicator 수신을 리턴 받을 수 있어요 !
 
 ```dart
 AwesomeScrollIndicator(
