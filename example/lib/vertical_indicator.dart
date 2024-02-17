@@ -43,9 +43,22 @@ class _VerticalIndicatorState extends State<VerticalIndicator> {
             slivers: [
               SliverList.builder(
                 // itemCount: 100,
-                itemBuilder: (context, index) => Text(
-                  index.toString(),
-                  style: TextStyle(color: Colors.white),
+                itemBuilder: (context, index) => Container(
+                  width: MediaQuery.of(context).size.width,
+                  height: 50,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        index.toString(),
+                        style: TextStyle(color: Colors.white),
+                      ),
+                      Text(
+                        index.toString(),
+                        style: TextStyle(color: Colors.white),
+                      ),
+                    ],
+                  ),
                 ),
               )
             ],
