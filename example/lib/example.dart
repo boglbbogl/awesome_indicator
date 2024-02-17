@@ -1,4 +1,5 @@
 import 'package:example/horizontal_indicator.dart';
+import 'package:example/vertical_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -25,11 +26,11 @@ class Example extends StatelessWidget {
             onTap: () => Navigator.of(context).push(
                 MaterialPageRoute(builder: (_) => const HorizontalIndicator())),
           ),
-          // _button(
-          //   content: "awesome_vertical_indicator",
-          //   onTap: () => Navigator.of(context).push(
-          //       MaterialPageRoute(builder: (_) => const HorizontalIndicator())),
-          // )
+          _button(
+            content: "awesome_vertical_indicator",
+            onTap: () => Navigator.of(context).push(
+                MaterialPageRoute(builder: (_) => const VerticalIndicator())),
+          )
         ],
       ),
     );
