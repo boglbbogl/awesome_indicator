@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class AwesomeScrollIndicator extends StatefulWidget {
+class AwesomeHorizontalIndicator extends StatefulWidget {
   final ScrollController controller;
   final double? height;
   final double? width;
@@ -11,7 +11,7 @@ class AwesomeScrollIndicator extends StatefulWidget {
   final Border? border;
   final Function(int, double)? onListener;
 
-  const AwesomeScrollIndicator({
+  const AwesomeHorizontalIndicator({
     Key? key,
     required this.controller,
     this.height,
@@ -25,10 +25,12 @@ class AwesomeScrollIndicator extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  State<AwesomeScrollIndicator> createState() => _AwesomeScrollIndicatorState();
+  State<AwesomeHorizontalIndicator> createState() =>
+      _AwesomeHorizontalIndicatorState();
 }
 
-class _AwesomeScrollIndicatorState extends State<AwesomeScrollIndicator> {
+class _AwesomeHorizontalIndicatorState
+    extends State<AwesomeHorizontalIndicator> {
   double _height = 0;
   double _width = 0;
   double _indicator = 0;
@@ -36,7 +38,7 @@ class _AwesomeScrollIndicatorState extends State<AwesomeScrollIndicator> {
   final ValueNotifier<double> _position = ValueNotifier(0);
 
   @override
-  void didUpdateWidget(covariant AwesomeScrollIndicator oldWidget) {
+  void didUpdateWidget(covariant AwesomeHorizontalIndicator oldWidget) {
     super.didUpdateWidget(oldWidget);
     _height = widget.height ?? 8;
     _width = widget.width ?? MediaQuery.of(context).size.width;
