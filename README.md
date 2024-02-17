@@ -34,12 +34,12 @@ import 'package:awesome_indicator/awesome_indicator.dart';
 
 ### Scroll Indicator
 
-- Just provide your scroll view ```ScrollController``` to AwesomeScrollIndicator !
+- Just provide your scroll view ```ScrollController``` to AwesomeHorizontalIndicator !
 
 ```dart
 final ScrollController controller = ScrollController();
 
-AwesomeScrollIndicator(
+AwesomeHorizontalIndicator(
   controller: controller,
 );
 ```
@@ -53,7 +53,7 @@ AwesomeScrollIndicator(
 - indicator : Indicator ratio between 0 and 1
 
 ```dart
-AwesomeScrollIndicator(
+AwesomeHorizontalIndicator(
   width : 300,
   height : 8,
   indicator : 0.3,
@@ -66,7 +66,7 @@ AwesomeScrollIndicator(
 - color : Indicator color
 
 ```dart
-AwesomeScrollIndicator(
+AwesomeHorizontalIndicator(
   backgroud: const Color.fromRGBO(95, 95, 95, 1),
   color : const Color.fromRGBO(255, 255, 255, 1),
 );
@@ -78,7 +78,7 @@ AwesomeScrollIndicator(
 - radius : BorderRadius of Container
 
 ```dart
-AwesomeScrollIndicator(
+AwesomeHorizontalIndicator(
   border : Border.all(),
   radius : 20,
 );
@@ -87,7 +87,7 @@ AwesomeScrollIndicator(
 **_onListener_**
 
 ```dart
-AwesomeScrollIndicator(
+AwesomeHorizontalIndicator(
   onListener: (int ratio, double position) {},
 );
 ```
