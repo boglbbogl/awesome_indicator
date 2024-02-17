@@ -1,3 +1,8 @@
+### [0.0.6]
+* _[Update] AwesomeScrollIndicator -> AwesomeHorizontalIndicator_
+* _[Remove] AwesomeScrollIndicator_
+* _[Add] AwesomeHorizontalIndicator_
+
 ### [0.0.5]
 * _[Update] README.md_
 
