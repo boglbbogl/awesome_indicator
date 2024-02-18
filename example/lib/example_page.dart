@@ -1,6 +1,7 @@
-import 'package:awesome_indicator/awesome_indicator.dart';
-import 'package:awesome_indicator/awesome_scroll_bar.dart';
+import 'package:example/awesome_horizontal_indicator.dart';
+import 'package:example/awesome_vertical_indicator.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class ExamplePage extends StatelessWidget {
   const ExamplePage({super.key});
@@ -8,14 +9,96 @@ class ExamplePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
+      backgroundColor: const Color.fromRGBO(26, 26, 26, 1),
+      appBar: AppBar(
+        centerTitle: false,
+        backgroundColor: const Color.fromRGBO(26, 26, 26, 1),
+        title: const Text(
+          "Awesome Indicator",
+          style: TextStyle(
+            fontWeight: FontWeight.w900,
+            color: Colors.white,
+          ),
+        ),
+      ),
+      body: ListView(
         children: [
-          // AwesomeScrollIndicator.vertical(controller: controller)
-          // AwesomeScrollIndicator.vertical(
-          //   controller,
-          //   width: 10,
-          // ),
-          // AwesomeScrollIndicator.horizontal(controller),
+          _content(
+            "Awesome Scroll Indicator",
+            [
+              _button(
+                "Horizontal",
+                () => Navigator.of(context).push(MaterialPageRoute(
+                    builder: (_) => const AwesomeHorizontalIndicator())),
+              ),
+              _button(
+                "Vertical",
+                () => Navigator.of(context).push(MaterialPageRoute(
+                    builder: (_) => const AwesomeVerticalIndicator())),
+              ),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+
+  GestureDetector _button(
+    String content,
+    Function() onTap,
+  ) {
+    return GestureDetector(
+      onTap: () {
+        HapticFeedback.mediumImpact();
+        onTap();
+      },
+      child: Container(
+        height: 50,
+        color: Colors.transparent,
+        margin: const EdgeInsets.only(top: 12),
+        padding: const EdgeInsets.only(left: 12),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text(
+              content,
+              style: const TextStyle(
+                fontWeight: FontWeight.bold,
+                color: Color.fromRGBO(225, 225, 225, 1),
+                fontSize: 16,
+              ),
+            ),
+            const Icon(
+              Icons.arrow_forward_ios_rounded,
+              color: Color.fromRGBO(225, 225, 225, 1),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Container _content(
+    String title,
+    List<Widget> children,
+  ) {
+    return Container(
+      margin: const EdgeInsets.only(top: 24),
+      padding: const EdgeInsets.symmetric(horizontal: 20),
+      color: Colors.transparent,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            title,
+            style: const TextStyle(
+              fontWeight: FontWeight.w900,
+              color: Colors.white,
+              fontSize: 20,
+            ),
+          ),
+          const SizedBox(height: 12),
+          ...children,
         ],
       ),
     );
