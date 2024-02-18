@@ -1,5 +1,6 @@
-import 'package:example/awesome_horizontal_indicator.dart';
-import 'package:example/awesome_vertical_indicator.dart';
+import 'package:example/example_awesome_horizontal_indicator.dart';
+import 'package:example/example_awesome_indicator_mode.dart';
+import 'package:example/example_awesome_vertical_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -29,12 +30,22 @@ class ExamplePage extends StatelessWidget {
               _button(
                 "Horizontal",
                 () => Navigator.of(context).push(MaterialPageRoute(
-                    builder: (_) => const AwesomeHorizontalIndicator())),
+                    builder: (_) => const ExampleAwesomeHorizontalIndicator())),
               ),
               _button(
                 "Vertical",
                 () => Navigator.of(context).push(MaterialPageRoute(
-                    builder: (_) => const AwesomeVerticalIndicator())),
+                    builder: (_) => const ExampleAwesomeVerticalIndicator())),
+              ),
+            ],
+          ),
+          _content(
+            "Awesome Indicator Mode",
+            [
+              _button(
+                "Mode",
+                () => Navigator.of(context).push(MaterialPageRoute(
+                    builder: (_) => const ExampleAwesomeIndicatorMode())),
               ),
             ],
           ),
@@ -99,6 +110,7 @@ class ExamplePage extends StatelessWidget {
           ),
           const SizedBox(height: 12),
           ...children,
+          const SizedBox(height: 24),
         ],
       ),
     );
