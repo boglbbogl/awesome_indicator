@@ -25,7 +25,7 @@ class ExamplePage extends StatelessWidget {
       body: ListView(
         children: [
           _content(
-            "Awesome Scroll Indicator",
+            "Slide Indicator",
             [
               _button(
                 "Horizontal",

@@ -41,49 +41,62 @@ class _ExampleAwesomeFillIndicatorState
       ),
       body: ListView(
         children: [
-          Container(
-            height: 300,
+          SizedBox(
+            height: 700,
             child: SingleChildScrollView(
               controller: horizontalController,
               scrollDirection: Axis.horizontal,
               child: Row(
                 children: [
-                  ...List.generate(
-                      30,
-                      (index) => Container(
-                            width: 300,
-                            height: 300,
-                            color: Colors.accents[index % 15],
-                          ))
+                  Image.asset(
+                    "assets/panorama_3.jpg",
+                  )
                 ],
               ),
             ),
           ),
-          AwesomeScrollIndicator.fill(
+          AwesomeSlideIndicator.fill(
             controller: horizontalController,
-            margin: EdgeInsets.symmetric(horizontal: 30, vertical: 20),
+            indicatorGradient: LinearGradient(colors: [
+              Colors.blue.shade200,
+              Colors.blue.shade800,
+            ]),
+            backgroundColor: const Color.fromRGBO(96, 96, 96, 1),
           ),
-          const SizedBox(height: 40),
           Container(
-            height: 300,
+            margin: const EdgeInsets.symmetric(vertical: 40),
+            height: 4,
+            color: const Color.fromRGBO(66, 66, 66, 1),
+          ),
+          SizedBox(
+            height: 200,
             child: Row(
               children: [
                 Expanded(
-                    child: ListView.builder(
-                        controller: verticalController,
-                        itemCount: 30,
-                        itemBuilder: (context, index) => Container(
-                              height: 300,
-                              color: Colors.accents[index % 15],
-                            ))),
-                AwesomeScrollIndicator.fill(
+                    child: SingleChildScrollView(
+                  controller: verticalController,
+                  child: Column(
+                    children: [
+                      Image.asset(
+                        "assets/panorama_2.jpg",
+                        // fit: BoxFit.fitHeight,
+                      )
+                    ],
+                  ),
+                )),
+                AwesomeSlideIndicator.fill(
                   scrollDirection: Axis.vertical,
                   controller: verticalController,
-                  margin: EdgeInsets.symmetric(horizontal: 30, vertical: 20),
+                  radius: 0,
+                  color: Colors.white,
+                  width: 4,
+                  margin: const EdgeInsets.only(left: 4),
+                  backgroundColor: const Color.fromRGBO(76, 76, 76, 1),
                 ),
               ],
             ),
           ),
+          const SizedBox(height: 40),
         ],
       ),
     );

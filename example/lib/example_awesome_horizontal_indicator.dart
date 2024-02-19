@@ -108,7 +108,7 @@ class _ExampleAwesomeHorizontalIndicatorState
               ),
             ),
           ),
-          AwesomeScrollIndicator.horizontal(
+          AwesomeSlideIndicator.horizontal(
             controller: iconController,
             indicator: 0.5,
             width: MediaQuery.of(context).size.width * 0.15,
@@ -143,7 +143,7 @@ class _ExampleAwesomeHorizontalIndicatorState
               ),
             ),
           ),
-          AwesomeScrollIndicator.horizontal(
+          AwesomeSlideIndicator.horizontal(
             controller: imageController,
             isDebug: true,
             margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
@@ -160,13 +160,13 @@ class _ExampleAwesomeHorizontalIndicatorState
               scrollDirection: Axis.horizontal,
               children: [
                 Image.asset(
-                  "assets/panorama.jpg",
+                  "assets/panorama_1.jpg",
                   fit: BoxFit.cover,
                 ),
               ],
             ),
           ),
-          AwesomeScrollIndicator.horizontal(
+          AwesomeSlideIndicator.horizontal(
             controller: panoramaController,
             indicator: 0.5,
             height: 14,

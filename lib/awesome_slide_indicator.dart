@@ -1,12 +1,12 @@
-import 'package:awesome_indicator/awesome_scroll_indicator_mode.dart';
+import 'package:awesome_indicator/awesome_slide_indicator_mode.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
-class AwesomeScrollIndicator extends StatelessWidget {
-  const AwesomeScrollIndicator({
+class AwesomeSlideIndicator extends StatelessWidget {
+  const AwesomeSlideIndicator({
     super.key,
     required this.controller,
-  })  : mode = AwesomeScrollIndicatorMode.none,
+  })  : mode = AwesomeSlideIndicatorMode.none,
         scrollDirection = Axis.horizontal,
         width = null,
         height = null,
@@ -20,7 +20,7 @@ class AwesomeScrollIndicator extends StatelessWidget {
         margin = null,
         isDebug = false;
 
-  const AwesomeScrollIndicator.fill({
+  const AwesomeSlideIndicator.fill({
     super.key,
     this.scrollDirection = Axis.horizontal,
     required this.controller,
@@ -35,9 +35,9 @@ class AwesomeScrollIndicator extends StatelessWidget {
     this.margin,
     this.isDebug = true,
   })  : indicator = 0,
-        mode = AwesomeScrollIndicatorMode.fill;
+        mode = AwesomeSlideIndicatorMode.fill;
 
-  const AwesomeScrollIndicator.vertical({
+  const AwesomeSlideIndicator.vertical({
     super.key,
     required this.controller,
     this.width = 8,
@@ -52,9 +52,9 @@ class AwesomeScrollIndicator extends StatelessWidget {
     this.margin,
     this.isDebug = true,
   })  : scrollDirection = Axis.vertical,
-        mode = AwesomeScrollIndicatorMode.move;
+        mode = AwesomeSlideIndicatorMode.move;
 
-  const AwesomeScrollIndicator.horizontal({
+  const AwesomeSlideIndicator.horizontal({
     super.key,
     required this.controller,
     this.width,
@@ -69,9 +69,9 @@ class AwesomeScrollIndicator extends StatelessWidget {
     this.margin,
     this.isDebug = true,
   })  : scrollDirection = Axis.horizontal,
-        mode = AwesomeScrollIndicatorMode.move;
+        mode = AwesomeSlideIndicatorMode.move;
 
-  final AwesomeScrollIndicatorMode mode;
+  final AwesomeSlideIndicatorMode mode;
   final Axis scrollDirection;
   final ScrollController controller;
   final double? width;
@@ -89,7 +89,7 @@ class AwesomeScrollIndicator extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return switch (mode) {
-      AwesomeScrollIndicatorMode.none => const SizedBox(),
+      AwesomeSlideIndicatorMode.none => const SizedBox(),
       _ => LayoutBuilder(
           builder: (BuildContext context, BoxConstraints constraints) =>
               _Widget(
@@ -114,7 +114,7 @@ class AwesomeScrollIndicator extends StatelessWidget {
 }
 
 class _Widget extends StatefulWidget {
-  final AwesomeScrollIndicatorMode mode;
+  final AwesomeSlideIndicatorMode mode;
   final Axis scrollDirection;
   final ScrollController controller;
   final double width;
@@ -189,7 +189,7 @@ class __WidgetState extends State<_Widget> {
   }
 
   void _setIndicator() {
-    if (widget.mode == AwesomeScrollIndicatorMode.move) {
+    if (widget.mode == AwesomeSlideIndicatorMode.move) {
       double indicator = widget.indicator >= 1
           ? 1
           : widget.indicator <= 0
@@ -200,20 +200,18 @@ class __WidgetState extends State<_Widget> {
       } else {
         _indicatorSize.value = Size(_width * indicator, _height);
       }
-    } else if (widget.mode == AwesomeScrollIndicatorMode.fill) {
-      _indicatorSize.value = const Size(0, 0);
     }
   }
 
   void _setSize() {
-    if (widget.mode == AwesomeScrollIndicatorMode.move) {
+    if (widget.mode == AwesomeSlideIndicatorMode.move) {
       _width = (widget.width.isInfinite
           ? MediaQuery.of(context).size.width
           : widget.width);
       _height = widget.height.isInfinite
           ? MediaQuery.of(context).size.height
           : widget.height;
-    } else if (widget.mode == AwesomeScrollIndicatorMode.fill) {
+    } else if (widget.mode == AwesomeSlideIndicatorMode.fill) {
       _width = widget.width.isInfinite ? 8 : widget.width;
       _height = widget.height.isInfinite ? 8 : widget.height;
     }
@@ -272,9 +270,9 @@ class __WidgetState extends State<_Widget> {
   }
 
   void _listener() {
-    if (widget.mode == AwesomeScrollIndicatorMode.move) {
+    if (widget.mode == AwesomeSlideIndicatorMode.move) {
       _moveListener();
-    } else if (widget.mode == AwesomeScrollIndicatorMode.fill) {
+    } else if (widget.mode == AwesomeSlideIndicatorMode.fill) {
       _fillListener();
     }
   }
@@ -297,10 +295,10 @@ class __WidgetState extends State<_Widget> {
                 valueListenable: _position,
                 builder: (BuildContext context, double value, Widget? child) =>
                     Positioned(
-                  top: widget.mode == AwesomeScrollIndicatorMode.move
+                  top: widget.mode == AwesomeSlideIndicatorMode.move
                       ? (widget.scrollDirection == Axis.vertical ? value : 0)
                       : null,
-                  left: widget.mode == AwesomeScrollIndicatorMode.move
+                  left: widget.mode == AwesomeSlideIndicatorMode.move
                       ? (widget.scrollDirection == Axis.horizontal ? value : 0)
                       : null,
                   child: ClipRRect(
@@ -331,13 +329,8 @@ class __WidgetState extends State<_Widget> {
   void _log(int ratio, double pixel) {
     if (widget.isDebug) {
       if (kDebugMode) {
-        if (widget.scrollDirection == Axis.vertical) {
-          print(
-              "AwesomeScrollIndicator.vertical(ratio: $ratio%, pixel: ${pixel.toStringAsFixed(2)}, direction: ${widget.scrollDirection.name})");
-        } else {
-          print(
-              "AwesomeScrollIndicator.horizontal(ratio: $ratio%, pixel: ${pixel.toStringAsFixed(2)}, direction: ${widget.scrollDirection.name})");
-        }
+        print(
+            "AwesomeSlideIndicator(ratio: $ratio%, pixel: ${pixel.toStringAsFixed(2)}, direction: ${widget.scrollDirection.name})");
       }
     }
   }

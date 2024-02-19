@@ -1,4 +1,4 @@
-import 'package:awesome_indicator/awesome_scroll_indicator.dart';
+import 'package:awesome_indicator/awesome_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -65,16 +65,12 @@ class _ExampleAwesomeVerticalIndicatorState
                     ],
                   ),
                 )),
-                AwesomeScrollIndicator.vertical(
+                AwesomeSlideIndicator.vertical(
                   controller: listController,
                   margin: const EdgeInsets.only(right: 12),
                   backgroundColor: Colors.red.shade200,
                   indicatorGradient: LinearGradient(colors: [
-                    Colors.pink.shade300,
-                    Colors.pink.shade400,
-                    Colors.pink.shade500,
-                    Colors.pink.shade600,
-                    Colors.pink.shade400,
+                    Colors.pink.shade700,
                     Colors.pink.shade300,
                   ], begin: Alignment.topCenter, end: Alignment.bottomCenter),
                   width: 12,
@@ -118,7 +114,7 @@ class _ExampleAwesomeVerticalIndicatorState
                             ),
                           )),
                 ),
-                AwesomeScrollIndicator.vertical(
+                AwesomeSlideIndicator.vertical(
                   controller: gridController,
                   indicator: 0.15,
                   margin: const EdgeInsets.only(left: 8, right: 12),
