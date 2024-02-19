@@ -1,5 +1,5 @@
+import 'package:example/example_awesome_fill_indicator.dart';
 import 'package:example/example_awesome_horizontal_indicator.dart';
-import 'package:example/example_awesome_indicator_mode.dart';
 import 'package:example/example_awesome_vertical_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -37,15 +37,10 @@ class ExamplePage extends StatelessWidget {
                 () => Navigator.of(context).push(MaterialPageRoute(
                     builder: (_) => const ExampleAwesomeVerticalIndicator())),
               ),
-            ],
-          ),
-          _content(
-            "Awesome Indicator Mode",
-            [
               _button(
-                "Mode",
+                "Vertical",
                 () => Navigator.of(context).push(MaterialPageRoute(
-                    builder: (_) => const ExampleAwesomeIndicatorMode())),
+                    builder: (_) => const ExampleAwesomeFillIndicator())),
               ),
             ],
           ),

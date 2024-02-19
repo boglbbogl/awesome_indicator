@@ -1,1 +1,0 @@
-enum AwesomeIndicatorMode { move, fill }

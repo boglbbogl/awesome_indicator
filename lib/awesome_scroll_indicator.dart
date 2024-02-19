@@ -1,4 +1,3 @@
-import 'package:awesome_indicator/awesome_indicator.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
@@ -7,7 +6,6 @@ class AwesomeScrollIndicator extends StatelessWidget {
     super.key,
     required this.scrollDirection,
     required this.controller,
-    this.mode = AwesomeIndicatorMode.move,
     this.width,
     this.height,
     this.indicator,
@@ -21,10 +19,25 @@ class AwesomeScrollIndicator extends StatelessWidget {
     this.isDebug = true,
   });
 
+  const AwesomeScrollIndicator.fill({
+    super.key,
+    this.scrollDirection = Axis.horizontal,
+    required this.controller,
+    this.width,
+    this.height,
+    this.backgroundColor,
+    this.color,
+    this.backgroundGradient,
+    this.indicatorGradient,
+    this.radius,
+    this.onListener,
+    this.margin,
+    this.isDebug = true,
+  }) : indicator = 0;
+
   const AwesomeScrollIndicator.vertical({
     super.key,
     required this.controller,
-    this.mode = AwesomeIndicatorMode.move,
     this.width = 8,
     this.height,
     this.indicator,
@@ -41,7 +54,6 @@ class AwesomeScrollIndicator extends StatelessWidget {
   const AwesomeScrollIndicator.horizontal({
     super.key,
     required this.controller,
-    this.mode = AwesomeIndicatorMode.move,
     this.width,
     this.height = 8,
     this.indicator,
@@ -57,7 +69,6 @@ class AwesomeScrollIndicator extends StatelessWidget {
 
   final Axis scrollDirection;
   final ScrollController controller;
-  final AwesomeIndicatorMode mode;
   final double? width;
   final double? height;
   final double? indicator;
@@ -76,7 +87,6 @@ class AwesomeScrollIndicator extends StatelessWidget {
       builder: (BuildContext context, BoxConstraints constraints) => _Widget(
         scrollDirection: scrollDirection,
         controller: controller,
-        mode: mode,
         width: width ?? constraints.maxWidth,
         height: height ?? constraints.maxHeight,
         indicator: indicator ?? 0.35,
@@ -96,7 +106,6 @@ class AwesomeScrollIndicator extends StatelessWidget {
 class _Widget extends StatefulWidget {
   final Axis scrollDirection;
   final ScrollController controller;
-  final AwesomeIndicatorMode mode;
   final double width;
   final double height;
   final double indicator;
@@ -111,7 +120,6 @@ class _Widget extends StatefulWidget {
   const _Widget({
     required this.scrollDirection,
     required this.controller,
-    required this.mode,
     required this.width,
     required this.height,
     required this.indicator,
