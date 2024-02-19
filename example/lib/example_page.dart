@@ -38,7 +38,7 @@ class ExamplePage extends StatelessWidget {
                     builder: (_) => const ExampleAwesomeVerticalIndicator())),
               ),
               _button(
-                "Vertical",
+                "Fill",
                 () => Navigator.of(context).push(MaterialPageRoute(
                     builder: (_) => const ExampleAwesomeFillIndicator())),
               ),

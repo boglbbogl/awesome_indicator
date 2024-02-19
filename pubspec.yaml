@@ -1,6 +1,6 @@
 name: awesome_indicator
 description: Indicator that operates with horizontal scrolling !!
-version: 0.0.8
+version: 1.0.0
 homepage: https://github.com/boglbbogl/awesome_indicator
 
 environment:
