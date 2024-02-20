@@ -1,4 +1,4 @@
-import 'package:example/example_awesome_indicator.dart';
+import 'package:example/example_slide_horizontal.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -23,13 +23,24 @@ class ExamplePage extends StatelessWidget {
       body: ListView(
         children: [
           _content(
-            "Indicator",
+            "Slide",
             [
-              _button(
-                "Indicator",
-                () => Navigator.of(context).push(MaterialPageRoute(
-                    builder: (_) => const ExampleAwesomeIndicator())),
-              ),
+              _item(
+                  "horizontal",
+                  () => Navigator.of(context).push(MaterialPageRoute(
+                      builder: (_) => const ExampleSlideHorizontal()))),
+              _item(
+                  "vertical",
+                  () => Navigator.of(context).push(MaterialPageRoute(
+                      builder: (_) => const ExampleSlideHorizontal()))),
+            ],
+          ),
+          _divider(),
+          _content(
+            "Page",
+            [
+              _item("name", () => null),
+              _item("name", () => null),
             ],
           ),
         ],
@@ -37,8 +48,14 @@ class ExamplePage extends StatelessWidget {
     );
   }
 
-  GestureDetector _button(
-    String content,
+  Container _divider() => Container(
+        margin: const EdgeInsets.only(bottom: 12, top: 24),
+        height: 4,
+        color: const Color.fromRGBO(66, 66, 66, 1),
+      );
+
+  GestureDetector _item(
+    String name,
     Function() onTap,
   ) {
     return GestureDetector(
@@ -47,25 +64,23 @@ class ExamplePage extends StatelessWidget {
         onTap();
       },
       child: Container(
-        height: 50,
         color: Colors.transparent,
-        margin: const EdgeInsets.only(top: 0),
-        padding: const EdgeInsets.only(left: 12),
+        margin: const EdgeInsets.only(left: 12, top: 24),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text(
-              content,
+              name,
               style: const TextStyle(
                 fontWeight: FontWeight.bold,
-                color: Color.fromRGBO(225, 225, 225, 1),
-                fontSize: 16,
+                color: Colors.white,
+                fontSize: 20,
               ),
             ),
             const Icon(
               Icons.arrow_forward_ios_rounded,
-              color: Color.fromRGBO(225, 225, 225, 1),
-            ),
+              color: Colors.white,
+            )
           ],
         ),
       ),
@@ -77,8 +92,8 @@ class ExamplePage extends StatelessWidget {
     List<Widget> children,
   ) {
     return Container(
-      margin: const EdgeInsets.only(top: 24),
-      padding: const EdgeInsets.symmetric(horizontal: 20),
+      margin: const EdgeInsets.only(top: 24, bottom: 18),
+      padding: const EdgeInsets.symmetric(horizontal: 24),
       color: Colors.transparent,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -88,12 +103,10 @@ class ExamplePage extends StatelessWidget {
             style: const TextStyle(
               fontWeight: FontWeight.w900,
               color: Colors.white,
-              fontSize: 20,
+              fontSize: 22,
             ),
           ),
-          const SizedBox(height: 12),
           ...children,
-          const SizedBox(height: 24),
         ],
       ),
     );

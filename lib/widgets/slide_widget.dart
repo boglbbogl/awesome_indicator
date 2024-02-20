@@ -208,7 +208,7 @@ class _SlideWidgetState extends State<SlideWidget> {
     if (widget.isDebug) {
       if (kDebugMode) {
         print(
-            "AwesomeSlideIndicator(ratio: $ratio%, pixel: ${pixel.toStringAsFixed(2)}, direction: ${widget.scrollDirection.name})");
+            "AwesomeIndicator(ratio: $ratio%, pixel: ${pixel.toStringAsFixed(2)}, direction: ${widget.scrollDirection.name})");
       }
     }
   }

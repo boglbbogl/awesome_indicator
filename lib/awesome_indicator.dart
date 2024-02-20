@@ -6,13 +6,15 @@ import 'package:awesome_indicator/widgets/slide_widget.dart';
 import 'package:flutter/material.dart';
 
 class AwesomeIndicator extends StatefulWidget {
-  const AwesomeIndicator({super.key})
-      : scrollDirection = null,
+  const AwesomeIndicator({
+    super.key,
+    required ScrollController controller,
+  })  : scrollDirection = null,
         indicator = null,
         width = null,
         height = null,
         mode = AwesomeIndicatorMode.none,
-        scrollController = null,
+        scrollController = controller,
         pageController = null,
         pageChildren = const <Widget>[],
         pageItemBuilder = null,
@@ -27,8 +29,8 @@ class AwesomeIndicator extends StatefulWidget {
 
   const AwesomeIndicator.move({
     super.key,
-    this.scrollDirection = Axis.horizontal,
     required ScrollController controller,
+    this.scrollDirection = Axis.horizontal,
     this.indicator,
     this.width,
     this.height,
@@ -48,8 +50,8 @@ class AwesomeIndicator extends StatefulWidget {
 
   const AwesomeIndicator.fill({
     super.key,
-    this.scrollDirection = Axis.horizontal,
     required ScrollController controller,
+    this.scrollDirection = Axis.horizontal,
     this.indicator,
     this.width,
     this.height,
@@ -139,8 +141,16 @@ class _AwesomeIndicatorState extends State<AwesomeIndicator> {
   Color? color;
 
   @override
+  void didUpdateWidget(covariant AwesomeIndicator oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    radius = widget.radius ?? radius;
+    _setColor();
+  }
+
+  @override
   void initState() {
     super.initState();
+    print("test : ${widget.scrollController}");
     radius = widget.radius ?? radius;
   }
 
