@@ -55,13 +55,13 @@ class _ExampleAwesomeFillIndicatorState
               ),
             ),
           ),
-          AwesomeSlideIndicator.fill(
+          AwesomeIndicator.fill(
             controller: horizontalController,
-            indicatorGradient: LinearGradient(colors: [
+            gradient: LinearGradient(colors: [
               Colors.blue.shade200,
               Colors.blue.shade800,
             ]),
-            backgroundColor: const Color.fromRGBO(96, 96, 96, 1),
+            background: const Color.fromRGBO(96, 96, 96, 1),
           ),
           Container(
             margin: const EdgeInsets.symmetric(vertical: 40),
@@ -79,19 +79,18 @@ class _ExampleAwesomeFillIndicatorState
                     children: [
                       Image.asset(
                         "assets/panorama_2.jpg",
-                        // fit: BoxFit.fitHeight,
                       )
                     ],
                   ),
                 )),
-                AwesomeSlideIndicator.fill(
+                AwesomeIndicator.fill(
                   scrollDirection: Axis.vertical,
                   controller: verticalController,
                   radius: 0,
                   color: Colors.white,
                   width: 4,
                   margin: const EdgeInsets.only(left: 4),
-                  backgroundColor: const Color.fromRGBO(76, 76, 76, 1),
+                  background: const Color.fromRGBO(76, 76, 76, 1),
                 ),
               ],
             ),

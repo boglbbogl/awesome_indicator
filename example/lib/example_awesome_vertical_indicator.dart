@@ -65,11 +65,12 @@ class _ExampleAwesomeVerticalIndicatorState
                     ],
                   ),
                 )),
-                AwesomeSlideIndicator.vertical(
+                AwesomeIndicator.move(
                   controller: listController,
+                  scrollDirection: Axis.vertical,
                   margin: const EdgeInsets.only(right: 12),
-                  backgroundColor: Colors.red.shade200,
-                  indicatorGradient: LinearGradient(colors: [
+                  background: Colors.red.shade200,
+                  gradient: LinearGradient(colors: [
                     Colors.pink.shade700,
                     Colors.pink.shade300,
                   ], begin: Alignment.topCenter, end: Alignment.bottomCenter),
@@ -114,12 +115,13 @@ class _ExampleAwesomeVerticalIndicatorState
                             ),
                           )),
                 ),
-                AwesomeSlideIndicator.vertical(
+                AwesomeIndicator.move(
                   controller: gridController,
+                  scrollDirection: Axis.vertical,
                   indicator: 0.15,
                   margin: const EdgeInsets.only(left: 8, right: 12),
                   color: Colors.white.withOpacity(0.9),
-                  backgroundColor: const Color.fromRGBO(135, 135, 135, 1),
+                  background: const Color.fromRGBO(135, 135, 135, 1),
                 ),
               ],
             ),

@@ -108,13 +108,13 @@ class _ExampleAwesomeHorizontalIndicatorState
               ),
             ),
           ),
-          AwesomeSlideIndicator.horizontal(
+          AwesomeIndicator.move(
             controller: iconController,
             indicator: 0.5,
             width: MediaQuery.of(context).size.width * 0.15,
             height: 4,
             radius: 50,
-            backgroundColor: Colors.pink.shade200,
+            background: Colors.pink.shade200,
             color: Colors.pink,
           ),
           _divider(),
@@ -143,11 +143,11 @@ class _ExampleAwesomeHorizontalIndicatorState
               ),
             ),
           ),
-          AwesomeSlideIndicator.horizontal(
+          AwesomeIndicator.move(
             controller: imageController,
             isDebug: true,
             margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
-            backgroundColor: const Color.fromRGBO(96, 96, 96, 1),
+            background: const Color.fromRGBO(96, 96, 96, 1),
             color: Colors.white,
             indicator: 0.2,
             onListener: _imageListener,
@@ -166,7 +166,7 @@ class _ExampleAwesomeHorizontalIndicatorState
               ],
             ),
           ),
-          AwesomeSlideIndicator.horizontal(
+          AwesomeIndicator.move(
             controller: panoramaController,
             indicator: 0.5,
             height: 14,
@@ -179,7 +179,7 @@ class _ExampleAwesomeHorizontalIndicatorState
               Color.fromRGBO(86, 86, 86, 1),
               Color.fromRGBO(66, 66, 66, 1),
             ]),
-            indicatorGradient: LinearGradient(colors: [
+            gradient: LinearGradient(colors: [
               Colors.cyan.shade200,
               Colors.cyan.shade300,
               Colors.cyan.shade500,
