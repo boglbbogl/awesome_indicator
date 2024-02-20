@@ -1,5 +1,6 @@
 import 'package:example/example_awesome_fill_indicator.dart';
 import 'package:example/example_awesome_horizontal_indicator.dart';
+import 'package:example/example_awesome_indicator.dart';
 import 'package:example/example_awesome_vertical_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -24,6 +25,16 @@ class ExamplePage extends StatelessWidget {
       ),
       body: ListView(
         children: [
+          _content(
+            "Indicator",
+            [
+              _button(
+                "Indicator",
+                () => Navigator.of(context).push(MaterialPageRoute(
+                    builder: (_) => const ExampleAwesomeIndicator())),
+              ),
+            ],
+          ),
           _content(
             "Slide Indicator",
             [
@@ -61,7 +72,7 @@ class ExamplePage extends StatelessWidget {
       child: Container(
         height: 50,
         color: Colors.transparent,
-        margin: const EdgeInsets.only(top: 12),
+        margin: const EdgeInsets.only(top: 0),
         padding: const EdgeInsets.only(left: 12),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,

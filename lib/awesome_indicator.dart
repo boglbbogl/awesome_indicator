@@ -187,7 +187,7 @@ class _AwesomeIndicatorState extends State<AwesomeIndicator> {
             isDebug: widget.isDebug,
           ),
         ),
-      AwesomeIndicatorMode.page => const PageWidget(),
+      AwesomeIndicatorMode.page => PageWidget(),
     };
   }
 }
