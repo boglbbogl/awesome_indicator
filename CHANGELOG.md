@@ -1,3 +1,6 @@
+### [0.0.8]
+* _[Update] Method_
+
 ### [0.0.7]
 * _[Update] README.md_
 
