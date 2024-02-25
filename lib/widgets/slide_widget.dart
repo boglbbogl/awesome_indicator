@@ -63,6 +63,7 @@ class _SlideWidgetState extends State<SlideWidget> {
     super.didUpdateWidget(oldWidget);
     _setSize();
     _setIndicator();
+    _listener(didUpdateWidget: true);
   }
 
   @override
@@ -108,7 +109,7 @@ class _SlideWidgetState extends State<SlideWidget> {
     }
   }
 
-  void _moveListener() {
+  void _moveListener(bool didUpdateWidget) {
     double box = widget.scrollDirection == Axis.vertical
         ? _indicatorSize.value.height
         : _indicatorSize.value.width;
@@ -117,17 +118,19 @@ class _SlideWidgetState extends State<SlideWidget> {
     double ratio = widget.controller.position.pixels /
         widget.controller.position.maxScrollExtent;
     _position.value = (fullSize - box) * ratio;
-    if (widget.onListener != null) {
-      widget.onListener!(
-        (ratio * 100).round(),
-        _position.value,
-        widget.scrollDirection,
-      );
+    if (!didUpdateWidget) {
+      if (widget.onListener != null) {
+        widget.onListener!(
+          (ratio * 100).round(),
+          _position.value,
+          widget.scrollDirection,
+        );
+      }
+      _log((ratio * 100).round(), _position.value);
     }
-    _log((ratio * 100).round(), _position.value);
   }
 
-  void _fillListener() {
+  void _fillListener(bool didUpdateWidget) {
     double fill = widget.scrollDirection == Axis.vertical ? _height : _width;
     double ratio = widget.controller.position.pixels /
         widget.controller.position.maxScrollExtent;
@@ -135,21 +138,25 @@ class _SlideWidgetState extends State<SlideWidget> {
     _indicatorSize.value = widget.scrollDirection == Axis.vertical
         ? Size(_width, progress)
         : Size(progress, _height);
-    if (widget.onListener != null) {
-      widget.onListener!(
-        (ratio * 100).round(),
-        progress,
-        widget.scrollDirection,
-      );
+    if (!didUpdateWidget) {
+      if (widget.onListener != null) {
+        widget.onListener!(
+          (ratio * 100).round(),
+          progress,
+          widget.scrollDirection,
+        );
+      }
+      _log((ratio * 100).round(), progress);
     }
-    _log((ratio * 100).round(), progress);
   }
 
-  void _listener() {
+  void _listener({
+    bool didUpdateWidget = false,
+  }) {
     if (widget.mode == AwesomeIndicatorMode.slideMove) {
-      _moveListener();
+      _moveListener(didUpdateWidget);
     } else if (widget.mode == AwesomeIndicatorMode.slideFill) {
-      _fillListener();
+      _fillListener(didUpdateWidget);
     }
   }
 

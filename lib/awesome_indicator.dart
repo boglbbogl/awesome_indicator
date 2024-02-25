@@ -150,7 +150,6 @@ class _AwesomeIndicatorState extends State<AwesomeIndicator> {
   @override
   void initState() {
     super.initState();
-    print("test : ${widget.scrollController}");
     radius = widget.radius ?? radius;
   }
 
@@ -197,7 +196,7 @@ class _AwesomeIndicatorState extends State<AwesomeIndicator> {
             isDebug: widget.isDebug,
           ),
         ),
-      AwesomeIndicatorMode.page => PageWidget(),
+      AwesomeIndicatorMode.page => const PageWidget(),
     };
   }
 }
