@@ -143,7 +143,7 @@ class _AwesomeIndicatorState extends State<AwesomeIndicator> {
   @override
   void didUpdateWidget(covariant AwesomeIndicator oldWidget) {
     super.didUpdateWidget(oldWidget);
-    radius = widget.radius ?? radius;
+    radius = widget.radius ?? 8;
     _setColor();
   }
 

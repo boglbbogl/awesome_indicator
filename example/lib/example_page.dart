@@ -1,4 +1,5 @@
 import 'package:example/example_slide_horizontal.dart';
+import 'package:example/example_slide_vertical.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -32,7 +33,7 @@ class ExamplePage extends StatelessWidget {
               _item(
                   "vertical",
                   () => Navigator.of(context).push(MaterialPageRoute(
-                      builder: (_) => const ExampleSlideHorizontal()))),
+                      builder: (_) => const ExampleSlideVertical()))),
             ],
           ),
           _divider(),
