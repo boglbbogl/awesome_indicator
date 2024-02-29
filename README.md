@@ -65,7 +65,9 @@ AwesomeIndicator.fill(
 **_controller_**
 
 ```dart
-controller: ScrollController()
+AwesomeIndicator.type(
+  controller: ScrollController(),
+);
 ```
 
 #### Optional
@@ -74,7 +76,9 @@ controller: ScrollController()
 > Default: Axis.horizontal
 
 ```dart
-scrollDirection: Axis.horizontal
+AwesomeIndicator.type(
+  scrollDirection: Axis.horizontal,
+);
 ```
 
 **_width_**
@@ -83,7 +87,9 @@ scrollDirection: Axis.horizontal
 > Axis.vertical : 8
 
 ```dart
-width: _width
+AwesomeIndicator.type(
+  width: _width,
+);
 ```
 
 **_height_**
@@ -92,7 +98,9 @@ width: _width
 > Axis.vertical : maxHeight
 
 ```dart
-height: _height
+AwesomeIndicator.type(
+  height: _height,
+);
 ```
 
 **_indicator_**
@@ -102,7 +110,9 @@ height: _height
 - Indicator ratio between 0 and 1
 
 ```dart
-indicator: 0.35
+AwesomeIndicator.type(
+  indicator: 0.35,
+);
 ```
 
 **__**
