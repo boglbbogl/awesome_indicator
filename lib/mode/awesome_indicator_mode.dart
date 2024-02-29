@@ -1,1 +1,6 @@
-enum AwesomeIndicatorMode { none, slideMove, slideFill, page }
+enum AwesomeIndicatorMode {
+  none,
+  slideMove,
+  slideFill,
+  // page,
+}

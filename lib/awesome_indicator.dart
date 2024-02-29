@@ -1,7 +1,6 @@
 library awesome_indicator;
 
 import 'package:awesome_indicator/mode/awesome_indicator_mode.dart';
-import 'package:awesome_indicator/widgets/page_widget.dart';
 import 'package:awesome_indicator/widgets/slide_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -196,7 +195,7 @@ class _AwesomeIndicatorState extends State<AwesomeIndicator> {
             isDebug: widget.isDebug,
           ),
         ),
-      AwesomeIndicatorMode.page => const PageWidget(),
+      // AwesomeIndicatorMode.page => const PageWidget(),
     };
   }
 }
