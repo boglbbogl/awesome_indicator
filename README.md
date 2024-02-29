@@ -1,6 +1,15 @@
 # 🔥 Awesome Indicator
 
-![IMB_KTMYvm](https://github.com/boglbbogl/awesome_indicator/assets/75574246/d94d1901-f7f3-4156-8d7c-56ceef4c1d62)
+<table>
+  <tr>
+    <th>Width</th>
+    <th>Height</th>
+  </tr>
+  <tr>
+     <td><img alt="" src="https://velog.velcdn.com/images/tygerhwang/post/9870ae8c-9861-4f01-8ae4-9259c2dbd42f/image.png" /></td>
+    <td><img alt="" src="https://velog.velcdn.com/images/tygerhwang/post/9870ae8c-9861-4f01-8ae4-9259c2dbd42f/image.png" /></td>
+  <tr>
+</table>
 
 ## Features
 
