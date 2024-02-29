@@ -1,10 +1,20 @@
 # 🔥 Awesome Indicator
 
-![IMB_KTMYvm](https://github.com/boglbbogl/awesome_indicator/assets/75574246/d94d1901-f7f3-4156-8d7c-56ceef4c1d62)
+<table>
+  <tr>
+    <th>Horizontal</th>
+    <th>Vertical</th>
+  </tr>
+  <tr>
+     <td><img alt="" src="https://github.com/boglbbogl/awesome_indicator/assets/75574246/302ef760-885b-4025-a35c-780e12dab8d3" /></td>
+    <td><img alt="" src="https://github.com/boglbbogl/awesome_indicator/assets/75574246/06142a1d-4434-4bdf-8c15-e02a286e3950" /></td>
+  <tr>
+</table>
 
 ## Features
 
-- Horizontal Scroll Indicator
+- AwesomeIndicator.move
+- AwesomeIndicator.fill
 
 -----------
 
@@ -21,94 +31,163 @@
 
 **_Add the package to pubspec.yaml_**
 
-```
+```yaml
 dependencies:
   awesome_indicator: ^<latest-version>
 ```
 
 **_After that import the package_**
 
-```
+```dart
 import 'package:awesome_indicator/awesome_indicator.dart';
 ```
 
-### Scroll Indicator
+### AwesomeIndicator
 
-- Just provide your scroll view ```ScrollController``` to AwesomeHorizontalIndicator !
+#### .move
 
 ```dart
-final ScrollController controller = ScrollController();
+AwesomeIndicator.move(
+  controller: _controller,
+);
+```
 
-AwesomeHorizontalIndicator(
-  controller: controller,
+#### .fill
+
+```dart
+AwesomeIndicator.fill(
+  controller: _controller,
+);
+```
+
+#### Require
+
+**_controller_**
+
+```dart
+AwesomeIndicator.type(
+  controller: ScrollController(),
 );
 ```
 
 #### Optional
 
-**_Size_**
-
-- width : width of Indicator
-- height : height of Indicator
-- indicator : Indicator ratio between 0 and 1
+**_scrollDirection_**
+> Default: Axis.horizontal
 
 ```dart
-AwesomeHorizontalIndicator(
-  width : 300,
-  height : 8,
-  indicator : 0.3,
+AwesomeIndicator.type(
+  scrollDirection: Axis.horizontal,
 );
 ```
 
-**_Colors_**
+**_width_**
+> Axis.horizontal : maxWidth
 
-- background : backround color of Indicator
-- color : Indicator color
+> Axis.vertical : 8
 
 ```dart
-AwesomeHorizontalIndicator(
-  backgroud: const Color.fromRGBO(95, 95, 95, 1),
-  color : const Color.fromRGBO(255, 255, 255, 1),
+AwesomeIndicator.type(
+  width: _width,
 );
 ```
 
-**_Box_**
+**_height_**
+> Axis.horizontal : 8
 
-- border : Boder of Container
-- radius : BorderRadius of Container
+> Axis.vertical : maxHeight
 
 ```dart
-AwesomeHorizontalIndicator(
-  border : Border.all(),
-  radius : 20,
+AwesomeIndicator.type(
+  height: _height,
+);
+```
+
+**_indicator_**
+> only .move mode
+
+> Default: 0.35 
+- Indicator ratio between 0 and 1
+
+```dart
+AwesomeIndicator.type(
+  indicator: 0.35,
+);
+```
+
+**_color_**
+- Indicator Color
+
+```dart
+AwesomeIndicator.type(
+  color: _color,
+);
+```
+
+**_background_**
+- Backround color of Indicator
+
+```dart
+AwesomeIndicator.type(
+  background: _background,
+);
+```
+
+**_gradient_**
+
+```dart
+AwesomeIndicator.type(
+  gradient: _gradient,
+);
+```
+
+**_backgroundGradient_**
+
+```dart
+AwesomeIndicator.type(
+  backgroundGradient: _backgroundGradient,
+);
+```
+
+**_radius_**
+> Default: 8
+
+```dart
+AwesomeIndicator.type(
+  radius: 8,
+);
+```
+
+**_margin_**
+
+```dart
+AwesomeIndicator.type(
+  margin: const EdgeInsets.zero,
 );
 ```
 
 **_onListener_**
 
 ```dart
-AwesomeHorizontalIndicator(
-  onListener: (int ratio, double position) {},
+AwesomeIndicator.type(
+  onListener: (int ratio, double pixel, Axis direction) {
+      // indicator Ratio
+      // indicator Pixel
+      // ScrollDirection
+  },
 );
 ```
 
-## Attribute
+**_isDebug_**
+> Default: true
 
-| Attribute      | Type     | Required  | Description                 | Default Value                 |
-| -------------- | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------ | ------------------------ |
-| controller     | ScrollController      | O  | Scroll listener.                  | -               | 
-| height         | double                | X  | Total height.                     | 8.0             | 
-| width          | double                | X  | Total width.                      | Max width       | 
-| indicator      | double                | X  | Indicator weight.                 | 50%             | 
-| background     | Color                 | X  | Background Color.                 | Hex(#C3C3C3)    | 
-| color          | Color                 | X  | Indicator Color.                  | Hex(#000000)    | 
-| radius         | double                | X  | Container Radius.                 | Max width       | 
-| border         | Border                | X  | Container Border.                 | Border.none     | 
-| onListener     | Function(int, double) | X  | Listen state(Percentage, Pixel).  | -               | 
+> Console log
 
-
-
-
+```dart
+AwesomeIndicator.type(
+  isDebug: true,
+);
+```
 
 
 --------
