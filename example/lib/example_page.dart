@@ -37,13 +37,13 @@ class ExamplePage extends StatelessWidget {
             ],
           ),
           _divider(),
-          _content(
-            "Page",
-            [
-              _item("name", () => null),
-              _item("name", () => null),
-            ],
-          ),
+          // _content(
+          //   "Page",
+          //   [
+          //     _item("name", () => null),
+          //     _item("name", () => null),
+          //   ],
+          // ),
         ],
       ),
     );
