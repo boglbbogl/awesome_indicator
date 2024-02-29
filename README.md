@@ -2,12 +2,12 @@
 
 <table>
   <tr>
-    <th>Width</th>
-    <th>Height</th>
+    <th>Horizontal</th>
+    <th>Vertical</th>
   </tr>
   <tr>
-     <td><img alt="" src="https://velog.velcdn.com/images/tygerhwang/post/9870ae8c-9861-4f01-8ae4-9259c2dbd42f/image.png" /></td>
-    <td><img alt="" src="https://velog.velcdn.com/images/tygerhwang/post/9870ae8c-9861-4f01-8ae4-9259c2dbd42f/image.png" /></td>
+     <td><img alt="" src="https://github.com/boglbbogl/awesome_indicator/assets/75574246/84f23b22-179a-4580-8997-891a60db33da" /></td>
+    <td><img alt="" src="https://github.com/boglbbogl/awesome_indicator/assets/75574246/4d868eba-5bc2-40c1-bd1c-b2776516c8f2" /></td>
   <tr>
 </table>
 
