@@ -115,57 +115,79 @@ AwesomeIndicator.type(
 );
 ```
 
-**__**
-
-**_Colors_**
-
-- background : backround color of Indicator
-- color : Indicator color
+**_color_**
+- Indicator Color
 
 ```dart
-AwesomeHorizontalIndicator(
-  backgroud: const Color.fromRGBO(95, 95, 95, 1),
-  color : const Color.fromRGBO(255, 255, 255, 1),
+AwesomeIndicator.type(
+  color: _color,
 );
 ```
 
-**_Box_**
-
-- border : Boder of Container
-- radius : BorderRadius of Container
+**_background_**
+- Backround color of Indicator
 
 ```dart
-AwesomeHorizontalIndicator(
-  border : Border.all(),
-  radius : 20,
+AwesomeIndicator.type(
+  background: _background,
+);
+```
+
+**_gradient_**
+
+```dart
+AwesomeIndicator.type(
+  gradient: _gradient,
+);
+```
+
+**_backgroundGradient_**
+
+```dart
+AwesomeIndicator.type(
+  backgroundGradient: _backgroundGradient,
+);
+```
+
+**_radius_**
+> Default: 8
+
+```dart
+AwesomeIndicator.type(
+  radius: 8,
+);
+```
+
+**_margin_**
+
+```dart
+AwesomeIndicator.type(
+  margin: const EdgeInsets.zero,
 );
 ```
 
 **_onListener_**
 
 ```dart
-AwesomeHorizontalIndicator(
-  onListener: (int ratio, double position) {},
+AwesomeIndicator.type(
+  onListener: (int ratio, double pixel, Axis direction) {
+      // indicator Ratio
+      // indicator Pixel
+      // ScrollDirection
+  },
 );
 ```
 
-## Attribute
+**_isDebug_**
+> Default: true
 
-| Attribute      | Type     | Required  | Description                 | Default Value                 |
-| -------------- | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------ | ------------------------ |
-| controller     | ScrollController      | O  | Scroll listener.                  | -               | 
-| height         | double                | X  | Total height.                     | 8.0             | 
-| width          | double                | X  | Total width.                      | Max width       | 
-| indicator      | double                | X  | Indicator weight.                 | 50%             | 
-| background     | Color                 | X  | Background Color.                 | Hex(#C3C3C3)    | 
-| color          | Color                 | X  | Indicator Color.                  | Hex(#000000)    | 
-| radius         | double                | X  | Container Radius.                 | Max width       | 
-| border         | Border                | X  | Container Border.                 | Border.none     | 
-| onListener     | Function(int, double) | X  | Listen state(Percentage, Pixel).  | -               | 
+> Console log
 
-
-
-
+```dart
+AwesomeIndicator.type(
+  isDebug: true,
+);
+```
 
 
 --------
