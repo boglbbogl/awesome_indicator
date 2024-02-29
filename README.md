@@ -6,8 +6,8 @@
     <th>Vertical</th>
   </tr>
   <tr>
-     <td><img alt="" src="https://github.com/boglbbogl/awesome_indicator/assets/75574246/84f23b22-179a-4580-8997-891a60db33da" /></td>
-    <td><img alt="" src="https://github.com/boglbbogl/awesome_indicator/assets/75574246/4d868eba-5bc2-40c1-bd1c-b2776516c8f2" /></td>
+     <td><img alt="" src="https://github.com/boglbbogl/awesome_indicator/assets/75574246/302ef760-885b-4025-a35c-780e12dab8d3" /></td>
+    <td><img alt="" src="https://github.com/boglbbogl/awesome_indicator/assets/75574246/06142a1d-4434-4bdf-8c15-e02a286e3950" /></td>
   <tr>
 </table>
 
