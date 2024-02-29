@@ -1,5 +1,6 @@
 ### [0.0.8]
 * _[Update] Method Change (AwesomeIndicator.mode)_
+* _[Remove] AwesomeHorizontalIndicator_
 
 ### [0.0.7]
 * _[Update] README.md_
